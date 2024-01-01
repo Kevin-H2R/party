@@ -9,7 +9,18 @@ import {
 } from "react-router-dom";
 import Login from './routes/login.jsx'
 import Register from './routes/register.jsx'
+import NewParty from './routes/new-party.jsx'
+import axios from 'axios'
 
+axios.interceptors.request.use(function (config) {
+  const token = localStorage.getItem('token')
+  if (token === null) {
+    return config
+  }
+  config.headers.Authorization =  token;
+   
+  return config;
+});
 
 const routes = [
   {
@@ -26,6 +37,8 @@ const isLoggedIn = localStorage.getItem('token') !== null
 if (!isLoggedIn) {
   routes.push({path: "/login", element: <Login />})
   routes.push({path: "/register", element: <Register />})
+} else {
+  routes.push({path: "/party", element: <NewParty />})
 }
 
 const router = createBrowserRouter(routes);
