@@ -10,7 +10,8 @@ import {
 import Login from './routes/login.jsx'
 import Register from './routes/register.jsx'
 
-const router = createBrowserRouter([
+
+const routes = [
   {
     path: "/",
     element: <Home />,
@@ -19,15 +20,15 @@ const router = createBrowserRouter([
     path: "/toto",
     element: <App />,
   },
-  {
-    path: "/login",
-    element: <Login />,
-  },
-  {
-    path: "/register",
-    element: <Register />,
-  },
-]);
+]
+
+const isLoggedIn = localStorage.getItem('token') !== null
+if (!isLoggedIn) {
+  routes.push({path: "/login", element: <Login />})
+  routes.push({path: "/register", element: <Register />})
+}
+
+const router = createBrowserRouter(routes);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
