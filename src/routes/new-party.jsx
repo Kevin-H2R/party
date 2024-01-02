@@ -1,3 +1,4 @@
+import axios from "axios"
 import { useState } from "react"
 
 const NewParty = () => {
@@ -5,6 +6,17 @@ const NewParty = () => {
   const [date, setDate] = useState('')
   const [location, setLocation] = useState('')
   const [maxGuest, setMaxGuest] = useState(0)
+
+  const createParty = () => {
+    axios.post(import.meta.env.VITE_API_URL + '/parties', {
+      name, start_date: date, location, capacity: maxGuest
+    }).then(response => {
+      console.log(response)
+    }).catch(err => {
+      console.log(err)
+    })
+  }
+
   return <>
     <h1>New party</h1>
     <form>
@@ -16,7 +28,7 @@ const NewParty = () => {
         value={location} onChange={e => setLocation(e.target.value)}/>
       <input type="number" placeholder="Max guest number" required
         value={maxGuest} onChange={e => setMaxGuest(e.target.value)}/>
-      <button type="submit" onClick={e => {e.preventDefault();}}>Create</button>
+      <button type="submit" onClick={e => {e.preventDefault(); createParty()}}>Create</button>
     </form>
   </>
 }
