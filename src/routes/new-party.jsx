@@ -18,7 +18,7 @@ const NewParty = () => {
   }
 
   return <>
-    <h1>New party</h1>
+    <h1 className="text-8xl font-bold underline">New party</h1>
     <form>
       <input type="text" placeholder="Event name" required 
         value={name} onChange={e => setName(e.target.value)}/>
