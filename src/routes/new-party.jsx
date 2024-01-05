@@ -17,6 +17,17 @@ const NewParty = () => {
       name, start_date: date, location, capacity: maxGuest
     }).then(response => {
       console.log(response)
+      const partyId = response.data.id
+      packages.forEach(p => {
+        axios.post(import.meta.env.VITE_API_URL + '/packages', {
+          name: p.name,
+          description: p.description,
+          price: p.price,
+          partyId: partyId
+        }).then(r => {
+          console.log(r)
+        })
+      })
     }).catch(err => {
       console.log(err)
     })
