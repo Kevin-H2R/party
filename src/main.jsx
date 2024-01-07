@@ -11,6 +11,7 @@ import Login from './routes/login.jsx'
 import Register from './routes/register.jsx'
 import NewParty from './routes/new-party.jsx'
 import axios from 'axios'
+import JoinParty from './routes/join-party.jsx'
 
 axios.interceptors.request.use(function (config) {
   const token = localStorage.getItem('token')
@@ -31,6 +32,10 @@ const routes = [
     path: "/toto",
     element: <App />,
   },
+  {
+    path: "/join/:salt",
+    element: <JoinParty />
+  }
 ]
 
 const isLoggedIn = localStorage.getItem('token') !== null
