@@ -13,6 +13,7 @@ import NewParty from './routes/new-party.jsx'
 import axios from 'axios'
 import JoinParty from './routes/join-party.jsx'
 import Logout from './routes/logout.jsx'
+import Dashboard from './routes/dashboard.jsx'
 
 axios.interceptors.request.use(function (config) {
   const token = localStorage.getItem('token')
@@ -37,10 +38,6 @@ const routes = [
     path: "/join/:salt",
     element: <JoinParty />
   }, 
-  {
-    path: '/logout',
-    element: <Logout/>
-  }
 ]
 
 const isLoggedIn = localStorage.getItem('token') !== null
@@ -49,6 +46,9 @@ if (!isLoggedIn) {
   routes.push({path: "/register", element: <Register />})
 } else {
   routes.push({path: "/party", element: <NewParty />})
+  routes.push({path: "/logout", element: <Logout />})
+  routes.push({path: "/dashboard", element: <Dashboard />})
+  
 }
 
 const router = createBrowserRouter(routes);
