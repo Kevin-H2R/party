@@ -12,6 +12,7 @@ import Register from './routes/register.jsx'
 import NewParty from './routes/new-party.jsx'
 import axios from 'axios'
 import JoinParty from './routes/join-party.jsx'
+import Logout from './routes/logout.jsx'
 
 axios.interceptors.request.use(function (config) {
   const token = localStorage.getItem('token')
@@ -35,6 +36,10 @@ const routes = [
   {
     path: "/join/:salt",
     element: <JoinParty />
+  }, 
+  {
+    path: '/logout',
+    element: <Logout/>
   }
 ]
 
