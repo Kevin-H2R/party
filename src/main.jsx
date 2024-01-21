@@ -25,6 +25,14 @@ axios.interceptors.request.use(function (config) {
   return config;
 });
 
+axios.interceptors.response.use(function (response) {
+  return response;
+}, function (error) {
+  localStorage.clear()
+  window.location.href = "/login"
+  return Promise.reject(error);
+});
+
 const routes = [
   {
     path: "/",
