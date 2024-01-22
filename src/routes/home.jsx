@@ -5,18 +5,29 @@ const Home = () => {
   return <HomeContainer className="flex flex-col p-8">
     <div className="flex justify-between">
       <div>Eventful</div>
-      <div className="flex gap-4">
-        <div>Main</div>
-        <div>About us</div>
-        <Link to="login">Sign up / Sign in</Link>
+      <div className="flex gap-4 items-center">
+        <div className="text-sm">Main</div>
+        <div className="text-sm">About us</div>
+        <button className="rounded-full grow-0 px-4 py-2 text-sm text-black">
+          <Link to="login" className="hover:text-black">Sign up / Sign in</Link>
+        </button>
       </div>
     </div>
-    <div className="flex grow flex-col justify-center">
-      <div>CREATE UNFORGETABLE EVENTS.</div>
-      <div>Become the best host - invite friends, and start making lasting memories today.</div>
-      <Link to="login">Create a New Event</Link>
+    <div className="flex grow">
+    <div className="flex grow-0 flex-col justify-center basis-6/12 gap-8">
+      <div className="text-5xl">CREATE UNFORGETABLE EVENTS.</div>
+      <div className="dm-sans">
+        Become the best host - invite friends, and start making lasting memories today.
+      </div>
+      <div className="flex">
+
+      <button className="rounded-full grow-0 px-4 py-2 text-black text-sm">
+        <Link to="login" className="hover:text-black">Create a New Event</Link>
+      </button>
+      </div>
     </div>
-    <div className="flex">Toto</div>
+    </div>
+    <div className="flex justify-end">Toto</div>
   </HomeContainer>
 }
 
