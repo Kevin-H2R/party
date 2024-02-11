@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { HomeContainer } from '../components/home/home.style'
-import landing from "../assets/landing.png"
+import landing from "../assets/landing.jpg"
 import { FaInstagram } from "react-icons/fa";
 const Home = () => {
   return <HomeContainer className="flex">
