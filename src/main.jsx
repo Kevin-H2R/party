@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import Home from './routes/home.jsx' 
 import './index.css'
 import {
@@ -38,10 +37,10 @@ const routes = [
     path: "/",
     element: <Home />,
   },
-  {
-    path: "/toto",
-    element: <App />,
-  },
+  // {
+  //   path: "/toto",
+  //   element: <App />,
+  // },
   {
     path: "/join/:salt",
     element: <JoinParty />
