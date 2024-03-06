@@ -19,6 +19,7 @@ button {
 .right-pane {
   background: url('./gather.jpg');
   background-size: cover;
+  background-position: left center;
 }
 .text-gradient {
   color: black;

@@ -4,7 +4,7 @@ import { HomeContainer } from '../components/home/home.style'
 import { FaInstagram } from "react-icons/fa";
 const Home = () => {
   return <HomeContainer className="flex">
-    <div className="flex flex-col basis-4/12 justify-between h-screen p-8 left-pane">
+    <div className="flex flex-col w-2/5 justify-between h-screen p-8 left-pane">
       <div>Moyeo</div>
       <div className="flex flex-col gap-8">
         <div className="text-5xl leading-snug">CREATE UNFORGETABLE <span className="text-gradient">EVENTS.</span></div>
@@ -29,7 +29,7 @@ const Home = () => {
         </div>
       </div>
     </div>
-    <div className="flex flex-col basis-8/12 justify-between h-screen p-8 right-pane">
+    <div className="flex flex-col w-3/5 justify-between h-screen p-8 right-pane">
       <div className="flex gap-4 items-center justify-end">
           <div className="text-sm">Home</div>
           <div className="text-sm">About us</div>
