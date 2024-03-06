@@ -17,7 +17,14 @@ button {
   background: linear-gradient(180deg, rgba(228, 204, 255, 0) -12.5%, rgba(228, 204, 255, 0) 7.15%, rgba(228, 204, 255, 0.59) 100%, #F5F5F5 100%);
 }
 .right-pane {
-  background: linear-gradient(180deg, #FFFFFF 3.85%, rgba(255, 255, 255, 0.145) 38.12%, rgba(250, 249, 252, 0.246972) 61.1%, #D9CEE8 99.22%);
+  background: url('./gather.jpg');
+  background-size: cover;
+}
+.text-gradient {
+  color: black;
+  background: linear-gradient(rgba(250, 115, 120, 0.19), #9529B0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 `
 
