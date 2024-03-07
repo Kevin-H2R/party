@@ -1,13 +1,6 @@
 import styled from "styled-components";
 
 const HomeContainer = styled.div`
-button {
-  background: #A3F074;
-  &:hover {
-    color: initial;
-    border-color: transparent;
-  }
-}
 .main-image {
   aspect-ratio: 1;
   width: 500px;
@@ -29,6 +22,21 @@ button {
 }
 `
 
+const HomeContainerMobile = styled.div`
+background: linear-gradient(180deg, rgba(228, 204, 255, 0) -12.5%, rgba(228, 204, 255, 0) 7.15%, rgba(228, 204, 255, 0.59) 100%, #F5F5F5 100%);
+.text-gradient {
+  color: black;
+  background: linear-gradient(rgba(250, 115, 120, 0.19), #9529B0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gather-image {
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+`
+
 export {
-  HomeContainer
+  HomeContainer,
+  HomeContainerMobile
 }
