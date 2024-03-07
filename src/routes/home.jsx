@@ -29,7 +29,9 @@ const Home = () => {
       <Button $primary $rounded>
         <Link to="login" className="hover:text-black">Create a New Event</Link>
       </Button> </div>
-    <img className="gather-image" src="/gather.jpg"/>
+    <div className="flex justify-center">
+      <img className="gather-image" src="/gather.jpg"/>
+    </div>
     <div className="grow"></div>
     <div className="flex justify-between">
       <div className="flex gap-4">

@@ -31,7 +31,8 @@ background: linear-gradient(180deg, rgba(228, 204, 255, 0) -12.5%, rgba(228, 204
   -webkit-text-fill-color: transparent;
 }
 .gather-image {
-  aspect-ratio: 1;
+  height: 300px;
+  width: 300px;
   border-radius: 50%;
 }
 `
