@@ -31,7 +31,7 @@ const Login = () => {
         <Button $primary type="submit" onClick={e => {e.preventDefault(); login()}}>
           Log In
         </Button>
-        <Link to="/register" className="text-sm">Don't have an account? Sign up</Link>
+        <Link to="/register" className="text-sm">Don&apos;t have an account? Sign up</Link>
       </form>
     </div>
     </LoginContainer>
