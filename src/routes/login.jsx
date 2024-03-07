@@ -19,7 +19,7 @@ const Login = () => {
       })
   }
   return <LoginContainer className="flex h-screen justify-center items-center p-2">
-    <div className="card flex flex-col items-center w-full md:w-9/12 lg:w-6/12">
+    <div className="card flex flex-col items-center w-full md:w-9/12 lg:w-6/12 xl:w-4/12">
       <div className="flex p-6 w-full title justify-center">Welcome back!</div>
       <form className="flex flex-col p-6 gap-4 w-full">
         <input type="email" className="login-input placeholder:text-sm placeholder:font-medium"
