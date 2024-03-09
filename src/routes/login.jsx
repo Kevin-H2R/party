@@ -3,6 +3,7 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 import { LoginContainer } from "../components/login/login.style"
 import { Button } from "../components/common/button"
+import Card from "../components/common/card"
 
 const Login = () => {
   const [email, setEmail] = useState('')
@@ -19,8 +20,8 @@ const Login = () => {
       })
   }
   return <LoginContainer className="flex h-screen justify-center items-center p-2">
-    <div className="card flex flex-col items-center w-full md:w-9/12 lg:w-6/12 xl:w-4/12">
-      <div className="flex p-6 w-full title justify-center">Welcome back!</div>
+    <Card className="flex flex-col items-center w-full md:w-9/12 lg:w-6/12 xl:w-4/12">
+    <div className="flex p-6 w-full title justify-center">Welcome back!</div>
       <form className="flex flex-col p-6 gap-4 w-full">
         <input type="email" className="login-input placeholder:text-sm placeholder:font-medium"
           value={email} placeholder="Email"
@@ -33,7 +34,8 @@ const Login = () => {
         </Button>
         <Link to="/register" className="text-sm">Don&apos;t have an account? Sign up</Link>
       </form>
-    </div>
+    </Card>
+      
     </LoginContainer>
 }
 
