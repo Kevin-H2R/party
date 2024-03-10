@@ -7,6 +7,10 @@ const LoginContainer = styled.div`
     border-radius: 5px;
     padding: 8px;
     width: 100%;
+    font-weight: normal;
+    &:focus-visible {
+      outline: none;
+    }
   }
   .register-link {
     color: #676363;
