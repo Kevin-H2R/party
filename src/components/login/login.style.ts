@@ -23,6 +23,6 @@ const LoginContainer = styled.div`
     border-radius: 0 0 5px 5px;
     border-top: none;
   }
-`
 
+`
 export {LoginContainer}
