@@ -28,7 +28,7 @@ const StepOne = ({nextStep}) => {
         <input className="login-input grouped-input-bottom" type="password" placeholder="Confirm password"
           value={confirm} onChange={e => setConfirm(e.target.value)}/>
       </div>
-      <Button $primary type="submit" onClick={e => {e.preventDefault(); nextStep()}}>
+      <Button $primary type="submit" onClick={e => {e.preventDefault(); nextStep({email, firstname, lastname, password})}}>
         Create a new account
       </Button>
       <Link to="/register" className="text-sm self-start">Already have an account? Log in</Link>
