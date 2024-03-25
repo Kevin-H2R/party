@@ -8,6 +8,17 @@ const StepOne = ({nextStep}) => {
   const [lastname, setLastname] = useState("")
   const [password, setPassword] = useState("")
   const [confirm, setConfirm] = useState("")
+  const [error, setError] = useState("")
+
+  const validate = () => {
+    setError("")
+    if (confirm !== password) {
+      setError("Password and confirmation do not match")
+      return
+    }
+    nextStep({email, firstname, lastname, password})
+  }
+
   return <>
     <div className="flex p-6 w-full title justify-center">Welcome to Moyeo</div>
     <form className="flex flex-col p-6 gap-4 w-full">
@@ -28,7 +39,8 @@ const StepOne = ({nextStep}) => {
         <input className="login-input grouped-input-bottom" type="password" placeholder="Confirm password"
           value={confirm} onChange={e => setConfirm(e.target.value)}/>
       </div>
-      <Button $primary type="submit" onClick={e => {e.preventDefault(); nextStep({email, firstname, lastname, password})}}>
+      {error && <div className="text-red-600 text-sm font-normal">{ error }</div>}
+      <Button $primary type="submit" onClick={e => {e.preventDefault(); validate()}}>
         Create a new account
       </Button>
       <Link to="/register" className="text-sm self-start">Already have an account? Log in</Link>
